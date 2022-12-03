@@ -1,43 +1,44 @@
-import java.lang.String;
 import java.util.Scanner;
 
-public class Calculator {
-    int num1, num2, result;
-    char operation;
+class Calculator {
+    private float num1, num2, result;
+    
+    void setNumbers() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter number 1: ");
+        num1 = in.nextInt();
+        System.out.println();
+
+        System.out.print("Enter number 2: ");
+        num2 = in.nextInt();
+    }
+
+    float getNum1() {
+        return num1;
+    }
+
+    float getNum2() {
+        return num2;
+    }
 
     void operationPlus() {
-        System.out.println("===-ВВЕДИТЕ 2 ЧИСЛА-===");
-        Scanner in = new Scanner(System.in);
-        num1 = in.nextInt();
-        num2 = in.nextInt();
-        result = num1 + num2; 
-        System.out.println(num1 + " + " + num2 + " = " + result);
+        result = num1 + num2;
+        System.out.print("Result: " + result);
     }
 
     void operationMinus() {
-        System.out.println("===-ВВЕДИТЕ 2 ЧИСЛА-===");
-        Scanner in = new Scanner(System.in);
-        num1 = in.nextInt();
-        num2 = in.nextInt();
-        result = num1 - num2; 
-        System.out.println(num1 + " - " + num2 + " = " + result);
+        result = num1 - num2;
+        System.out.print("Result: " + result);
     }
 
     void operationMultiplication() {
-        System.out.println("===-ВВЕДИТЕ 2 ЧИСЛА-===");
-        Scanner in = new Scanner(System.in);
-        num1 = in.nextInt();
-        num2 = in.nextInt();
-        result = num1 * num2; 
-        System.out.println(num1 + " * " + num2 + " = " + result);
+        result = num1 * num2;
+        System.out.print("Result: " + result);
     }
-
+    
     void operationDivision() {
-        System.out.println("===-ВВЕДИТЕ 2 ЧИСЛА-===");
-        Scanner in = new Scanner(System.in);
-        num1 = in.nextInt();
-        num2 = in.nextInt();
-        result = num1 / num2; 
-        System.out.println(num1 + " : " + num2 + " = " + result);
+        result = num1 / num2;
+        System.out.print("Result: " + result);
     }
 }
