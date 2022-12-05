@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import Interfaces.HumanInterface;
+
 import java.lang.String;
 
 public class Main {
@@ -10,7 +13,6 @@ public class Main {
         System.out.print("Please enter your name: ");
         Scanner inputName = new Scanner(System.in);
         playerName = inputName.nextLine();
-        System.out.println();
         // Enterting age
         System.out.print("Please enter your age: ");
         Scanner inputAge = new Scanner(System.in);
@@ -31,8 +33,12 @@ public class Main {
         } else if (playerGender == 'F') {
             Woman playerWoman = new Woman(playerName, playerAge, playerGender);
             playerWoman.sayGender();
-        } else {
-            System.out.println("Error..\n Use only F - female and M - male");
-        }
+        } 
+
+        // What I can to do?
+        // Interfaces
+        HumanInterface playerMan = new Man(playerName, playerAge, playerGender);
+        playerMan.myAgeIs();
+        playerMan.myNameIs();
     }
 }
