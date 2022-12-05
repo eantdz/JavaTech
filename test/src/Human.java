@@ -1,47 +1,32 @@
 import java.lang.String;
+import java.util.Scanner;
 
 public class Human {
-    // Environment
-    private String name, lastname;
+    private String name;
     private int age;
-    // Constructor of Human 
-    public Human (String name, String lastname, int age) {
-        this.name = name;
+    // Set constructor for Human name and age
+    public Human (String name, int age) {
         this.age = age;
-        this.lastname = lastname;
+        this.name = name;
     }
     // Setters and getters begin
-    void setName (String name) {
+    void setName(String name) {
         this.name = name;
     }
-    void setLastName (String lastname) {
-        this.lastname = lastname;
-    }
-    void setAge (int age) {
+    void setAge(int age) {
         this.age = age;
     }
     String getName() {
         return name;
     }
-    String getLastName() {
-        return lastname;
-    }
     int getAge() {
         return age;
     }
-    // Setters and getters end
-
-    // Method sayHello by StringBuilder. 
+    // Setters and getters end 
+    //---
+    // Methods for Human
     void sayHello () {
-        StringBuilder sayHello = new StringBuilder("Hello! My name is ");
-        sayHello.append(name).append(" ").append(lastname);
-        System.out.println(sayHello);
+        System.out.printf("Hello! My name is %s. I'am %d year's old..", this.name, this.age);
     }
-
-    // Method sayGoodBye by StringBulder.
-    void sayGoodBye () {
-        StringBuilder sayGoodBye = new StringBuilder("Glad to see you. By ");
-        sayGoodBye.append(name + " " + lastname);
-        System.out.println(sayGoodBye);
-    }
+    
 }
