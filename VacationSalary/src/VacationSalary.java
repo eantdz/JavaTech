@@ -14,10 +14,14 @@ public class VacationSalary {
         try (Scanner in = new Scanner(System.in)) {
             System.out.print("How much months do you work in this organization?: ");
             workMonths = in.nextInt();
+            if (workMonths > 12) {
+                workMonths = 12;
+            }
             // Array salary for salary per month
             List<Integer> salary = new ArrayList<Integer>(workMonths);
             System.out.println("Enter your salary per month: ");
             for (int i = 0; i < workMonths; i++) {
+                System.out.print("Per " + (i+1) + " month: ");
                 salary.add(i, in.nextInt()); 
                 sum = sum + salary.get(i);
             }
